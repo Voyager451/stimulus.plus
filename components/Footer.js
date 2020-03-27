@@ -11,7 +11,7 @@ const Footer = (props) => {
         <Card className={"footer-card"}>
             <CardBody>
                 <span className="intro-subtitle">
-                    Made with <span title={"Make America Think Harder"}>MATH</span> & 💕️ by YangGang
+                    Made with <span title={"Make America Think Harder"}>MATH</span> & <span className="heart" />
                 </span>
                 <span className="footer-divider" />
                 Not affiliated with any organization
@@ -23,6 +23,11 @@ const Footer = (props) => {
                     </a></b>
                 <span className="footer-divider" />
                 Email: <a href="mailto:stimulus.999@gmail.com" target="_blank">stimulus.999@gmail.com</a>
+
+                <br/>
+                <div className={"estimate-disclaimer"}>
+                    Disclaimer: This site is for information purposes only. This site does not provide tax, legal or accounting advice.
+                </div>
             </CardBody>
         </Card>
     );

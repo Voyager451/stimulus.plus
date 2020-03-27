@@ -32,8 +32,6 @@ const ChildrenCard = () => {
 
     const { state, setNumOfChildren } = useState();
 
-    console.log(state);
-
     return (
         <Card className={" num-of-children-card"}>
             <CardHeader># of Children</CardHeader>
@@ -43,7 +41,7 @@ const ChildrenCard = () => {
                     type="number"
                     placeholder="0"
                     min="0"
-                    max="99"
+                    max="50"
                     onChange={e => setNumOfChildren(e.target.value)}
                 />
             </CardBody>

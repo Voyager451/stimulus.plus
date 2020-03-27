@@ -50,7 +50,7 @@ const IncomeCard = () => {
                     type="number"
                     placeholder="0"
                     min="0"
-                    max="199999"
+                    max="700000"
                     step="1000"
                 />
                 <br/>
@@ -60,7 +60,7 @@ const IncomeCard = () => {
                     type="range"
                     step="1000"
                     min="0"
-                    max="199999"
+                    max="700000"
                     id="exampleCustomRange"
                     name="customRange"/>
             </CardBody>

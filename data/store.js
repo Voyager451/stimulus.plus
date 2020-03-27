@@ -2,8 +2,8 @@ import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 const initialState = {
-    filingYear: 2018,
-    filingStatus: null,
+    filingYear: 2019,
+    filingStatus: 1,
     numOfChildren: 0,
     incomeAmount: 50000,
 };

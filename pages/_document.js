@@ -13,7 +13,6 @@ export default class MyDocument extends Document {
         return (
             <html>
             <Head>
-                <title>Stimulus Payment Calculator - Stimulus.Plus</title>
                 <meta charSet="utf-8"/>
                 <meta name="description" content="U.S. stimulus payment calculator."/>
                 <meta name="keywords"

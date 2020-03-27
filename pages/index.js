@@ -17,7 +17,7 @@ import TaxFilingCard from "../components/TaxFilingCard";
 import IncomeCard from "../components/IncomeCard";
 import EstimateCard from "../components/EstimateCard";
 import ChildrenCard from "../components/ChildrenCard";
-import InfoCard from "../components/InfoCard";
+import ResourceCard from "../components/InfoCard";
 import Footer from "../components/Footer";
 
 class Index extends React.Component {
@@ -26,12 +26,13 @@ class Index extends React.Component {
 
         return (
             <div>
+                <title>Stimulus Payment Calculator - Stimulus.Plus</title>
                 <Navbar expand="md" className={"justify-content-center"}>
                     <NavbarBrand href="/">stimulus.plus</NavbarBrand>
                 </Navbar>
 
                 <Container>
-                    <div style={{marginBottom: '25px', textAlign: 'center'}}>
+                    <div className="intro-stimulus-wrap">
                         <h3 className="intro-stimulus">💵 Calculate your <span
                             title={"Coronavirus"}>COVID-19</span> stimulus payment</h3>
                     </div>
@@ -50,21 +51,16 @@ class Index extends React.Component {
                             <IncomeCard/>
                         </Col>
                     </Row>
+
                     <Row style={{marginTop: '25px'}} className={"justify-content-center"}>
                         <Col sm="9">
                             <EstimateCard/>
                         </Col>
-                        <div className="alert alert-primary" role="alert"
-                             style={{marginTop: '16px'}}>
-                            Like the idea of direct payments to individuals? Consider
-                            supporting&nbsp;
-                            <b><a href={'https://movehumanityforward.com/'} target="_blank">Universal
-                                Basic Income</a></b>.
-                        </div>
                     </Row>
-                    <Row>
+
+                    <Row style={{marginTop: '25px'}}>
                         <Col sm="12">
-                            <InfoCard/>
+                            <ResourceCard/>
                         </Col>
                     </Row>
 

@@ -6,7 +6,7 @@ import {
     Label
 } from 'reactstrap';
 
-const useTaxFilingStatus = () =>
+const useState = () =>
 {
     const state =
         useSelector(
@@ -36,13 +36,13 @@ const useTaxFilingStatus = () =>
 
 const TaxFilingCard = () => {
 
-    const { state, setFilingYear, setFilingStatus } = useTaxFilingStatus();
+    const { state, setFilingYear, setFilingStatus } = useState();
 
     return (
         <Card className={" tax-filing-card"}>
             <CardHeader>Tax Filing Status</CardHeader>
             <CardBody>
-                <Label>Did you file 2019 taxes?</Label>
+                <Label>Did you file your 2019 taxes?</Label>
                 <ButtonGroup>
                     <Button color="secondary"
                             onClick={() => setFilingYear(2019)}
