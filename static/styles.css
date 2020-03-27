@@ -1,0 +1,104 @@
+body {
+    background: #e9ecef;
+    font-family: "Montserrat", Tahoma, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.navbar-brand {
+    margin-right: 0;
+    padding: .6625rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #317153;
+    background: #fff;
+    border-radius: 5px;
+    border: 2px solid #317153;
+}
+
+.card-text {
+    font-size: 15px;
+}
+
+.intro-stimulus {
+    color: #2f2f2f;
+    font-weight: 700;
+}
+.intro-subtitle {
+    /*font-style: italic;*/
+    /*color: #8f9394;*/
+}
+
+.your-money-total {
+    /*color: #319231;*/
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#total-stimulus {
+    color: #317153;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#income-input {
+    font-size: 20px;
+}
+
+.estimate-disclaimer {
+    font-size: 13px;
+    color: #8f9394;
+}
+
+.your-money-cards {
+    text-align: center;
+}
+
+
+.your-money-cards .card {
+    /*background: #f0f3f6;*/
+}
+
+.your-money-info-title {
+    /*color: #007bff;*/
+}
+
+.your-money-info-amount {
+    color: #2a78cc;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.your-money-sign {
+    font-size: 40px;
+    color: #dedede;
+}
+
+.tax-filing-card .btn {
+    font-size: 16px;
+    border: 1px solid #000000;
+}
+
+.tax-filing-card label {
+    display: block;
+    font-size: 16px;
+}
+
+.num-of-children-card input {
+    font-size: 3em;
+    text-align: center;
+}
+
+.footer-card {
+    font-size: 13px;
+}
+.footer-divider {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.footer-divider:after {
+    content: "·";
+}
