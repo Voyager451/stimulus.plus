@@ -2,15 +2,8 @@ import React from "react";
 import { withRedux } from '../lib/redux';
 
 import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button, CardHeader,
     Container, Row, Col,
-    Navbar, NavbarBrand, NavbarToggler,
-    Nav, FormGroup,
-    Input, Dropdown, DropdownItem,
-    CustomInput, Label, Badge,
-    Toast, ToastBody, ToastHeader,
-    ButtonToggle
+    Navbar, NavbarBrand
 } from 'reactstrap';
 
 import TaxFilingCard from "../components/TaxFilingCard";
@@ -38,11 +31,7 @@ class Index extends React.Component {
                     </div>
                     <Row>
                         <Col sm="4">
-                            <TaxFilingCard
-                                {...this.props}
-                                setFilingYear={this.setFilingYear}
-                                setFilingStatus={this.setFilingStatus}
-                            />
+                            <TaxFilingCard/>
                         </Col>
                         <Col sm="2">
                             <ChildrenCard/>

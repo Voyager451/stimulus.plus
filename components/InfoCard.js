@@ -1,7 +1,6 @@
 import React from 'react';
 import {
-    Button, ButtonGroup, Card, CardBody, CardHeader, CardText, Col, CustomInput, Input,
-    Label, ListGroup, ListGroupItem, Row
+    Col, ListGroup, ListGroupItem, Row
 } from 'reactstrap';
 
 const InfoCard = (props) => {

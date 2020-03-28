@@ -2,8 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux'
 
 import {
-    Button, ButtonGroup, Card, CardBody, CardHeader, CardText, Col, CustomInput, Input,
-    Label
+    Card, CardBody, CardHeader, CardText, CustomInput, Input
 } from 'reactstrap';
 
 const useState = () =>

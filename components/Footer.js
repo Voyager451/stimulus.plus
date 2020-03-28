@@ -1,7 +1,6 @@
 import React from 'react';
 import {
-    Button, ButtonGroup, Card, CardBody, CardHeader, CardText, Col, CustomInput, Input,
-    Label, ListGroup, ListGroupItem, Row
+    Card, CardBody
 } from 'reactstrap';
 
 const Footer = (props) => {
