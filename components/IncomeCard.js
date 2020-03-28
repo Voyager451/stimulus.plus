@@ -31,6 +31,8 @@ const IncomeCard = () => {
 
     const { state, setIncomeAmount } = useState();
 
+    const maxIncome = 400000;
+
     return (
         <Card className={""}>
             <CardHeader>Income</CardHeader>
@@ -49,7 +51,7 @@ const IncomeCard = () => {
                     type="number"
                     placeholder="0"
                     min="0"
-                    max="700000"
+                    max={maxIncome}
                     step="1000"
                 />
                 <br/>
@@ -59,9 +61,8 @@ const IncomeCard = () => {
                     type="range"
                     step="1000"
                     min="0"
-                    max="700000"
-                    id="exampleCustomRange"
-                    name="customRange"/>
+                    max={maxIncome}
+                    />
             </CardBody>
         </Card>
     );

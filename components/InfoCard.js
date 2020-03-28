@@ -11,6 +11,7 @@ const InfoCard = (props) => {
             <Col sm="6">
 
                 <ListGroup>
+
                     <ListGroupItem
                         tag="a"
                         href="https://movehumanityforward.com"
@@ -18,9 +19,7 @@ const InfoCard = (props) => {
                     >
                         Pushing for Universal Basic Income - Humanity Forward
                     </ListGroupItem>
-                </ListGroup>
 
-                <ListGroup>
                     <ListGroupItem
                         tag="a"
                         href="https://www.npr.org/2020/03/26/821457551/whats-inside-the-senate-s-2-trillion-coronavirus-aid-package"
@@ -28,9 +27,7 @@ const InfoCard = (props) => {
                     >
                         Stimulus bill money breakdown - NPR
                     </ListGroupItem>
-                </ListGroup>
 
-                <ListGroup>
                     <ListGroupItem
                         tag="a"
                         href="https://www.reddit.com/r/dataisbeautiful/comments/fppc7v/oc_where_the_money_goes_in_the_us_senates_2t/"
@@ -38,9 +35,7 @@ const InfoCard = (props) => {
                     >
                         Stimulus bill money breakdown - Reddit graphic
                     </ListGroupItem>
-                </ListGroup>
 
-                <ListGroup>
                     <ListGroupItem
                         tag="a"
                         href="https://www.documentcloud.org/documents/6819239-FINAL-FINAL-CARES-ACT.html"
