@@ -40,6 +40,16 @@ const InfoCard = (props) => {
                     </ListGroupItem>
                 </ListGroup>
 
+                <ListGroup>
+                    <ListGroupItem
+                        tag="a"
+                        href="https://www.documentcloud.org/documents/6819239-FINAL-FINAL-CARES-ACT.html"
+                        target="_blank"
+                    >
+                        The full stimulus bill (CARES Act) document
+                    </ListGroupItem>
+                </ListGroup>
+
             </Col>
 
             <Col sm="6">
