@@ -13,7 +13,7 @@ class MyDocument extends Document {
             <html>
                 <Head>
                     <meta charSet="utf-8"/>
-                    <meta name="description" content="U.S. stimulus payment calculator."/>
+                    <meta name="description" content="Calculate what you will get from COVID-19 (Coronavirus) stimulus payments/checks."/>
                     <meta name="keywords"
                         content="stimulus calculator, stimulus payment calculator, stimulus check calculator, coronavirus stimulus calculator, coronavirus payment calculator, covid-19 payment calculator"/>
                     <meta name="viewport"
