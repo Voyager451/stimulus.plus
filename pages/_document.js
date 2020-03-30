@@ -32,6 +32,8 @@ class MyDocument extends Document {
                     <meta property="og:type" content="website" />
                     <meta name="og:title" property="og:title" content={ siteTitle } />
                     <meta name="og:description" property="og:description" content={ siteDesc } />
+                    <meta name="twitter:title" content={ siteTitle } />
+                    <meta name="twitter:description" content={ siteDesc } />
                 </Head>
                 <body>
                     <Main />
