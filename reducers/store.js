@@ -4,6 +4,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 const initialState = {
     filingYear: 2019,
     filingStatus: 1,
+    dependentStatus: 0,
     numOfChildren: 0,
     incomeAmount: 50000,
 };
@@ -19,6 +20,11 @@ const reducer = (state = initialState, action) => {
         return {
             ...state,
             filingStatus: action.payload,
+        };
+    case 'SET_DEPENDENT_STATUS':
+        return {
+            ...state,
+            dependentStatus: action.payload,
         };
     case 'SET_NUM_OF_CHILDREN':
         return {

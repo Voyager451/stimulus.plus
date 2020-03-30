@@ -7,19 +7,23 @@ import {
 
 const useState = () => {
     const state = useSelector(
-        ({ filingYear, incomeAmount }) => ({
-            filingYear,
-            incomeAmount,
-        }),
+        ({ filingYear, incomeAmount }) => {
+            return {
+                filingYear,
+                incomeAmount,
+            };
+        },
         shallowEqual,
     );
 
     const dispatch = useDispatch();
 
-    const setIncomeAmount = (val) => dispatch({
-        type: 'SET_INCOME_AMOUNT',
-        payload: val,
-    });
+    const setIncomeAmount = (val) => {
+        return dispatch({
+            type: 'SET_INCOME_AMOUNT',
+            payload: val,
+        });
+    };
 
     return { state, setIncomeAmount };
 };
@@ -35,7 +39,7 @@ const IncomeCard = () => {
             <CardHeader>Income</CardHeader>
             <CardBody>
                 <CardText>
-                    Enter your&nbsp;
+                    Enter {' '}
                     <a href="https://www.irs.gov/e-file-providers/definition-of-adjusted-gross-income"
                         target="_blank" rel='noreferrer noopener'>
                         adjusted gross income
@@ -44,7 +48,7 @@ const IncomeCard = () => {
                 <Input
                     id="income-input"
                     value={ state.incomeAmount }
-                    onChange={ (e) => setIncomeAmount(e.target.value) }
+                    onChange={ (e) => { return setIncomeAmount(e.target.value); } }
                     type="number"
                     placeholder="0"
                     min="0"
@@ -54,7 +58,7 @@ const IncomeCard = () => {
                 <br/>
                 <CustomInput
                     value={ state.incomeAmount }
-                    onChange={ (e) => setIncomeAmount(e.target.value) }
+                    onChange={ (e) => { return setIncomeAmount(e.target.value); } }
                     type="range"
                     step="1000"
                     min="0"

@@ -17,6 +17,15 @@ body {
     border-radius: 5px;
     border: 2px solid #317153;
 }
+.navbar-brand:hover, .navbar-brand:focus {
+    color: #e2e2e2;
+    background: #317153;
+}
+.navbar-brand:active {
+    position: relative;
+    top: 1px;
+}
+
 
 .intro-stimulus {
     color: #2f2f2f;
@@ -81,11 +90,21 @@ body {
 
 .tax-filing-card .btn {
     font-size: 16px;
-    border: 1px solid #000000;
+    /*border: 1px solid #000000;*/
 }
 .tax-filing-card label {
     display: block;
     font-size: 16px;
+}
+.tax-filing-dependent-yes-msg {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid #a21e1e;
+    color: #a21e1e;
 }
 
 .num-of-children-card input {

@@ -8,11 +8,16 @@ import {
 
 const useState = () => {
     const state = useSelector(
-        ({ filingStatus, incomeAmount, numOfChildren }) => ({
-            filingStatus,
-            numOfChildren,
-            incomeAmount,
-        }),
+        ({
+            filingStatus, incomeAmount, numOfChildren, dependentStatus,
+        }) => {
+            return {
+                filingStatus,
+                numOfChildren,
+                incomeAmount,
+                dependentStatus,
+            };
+        },
         shallowEqual,
     );
 
@@ -39,6 +44,7 @@ const EstimateCard = () => {
     }
 
     function getAmounts(data) {
+
         // Default values for filing status Single
         let baseAmount = 1200;
         let excessLimit = 75000;
@@ -65,7 +71,7 @@ const EstimateCard = () => {
             excessIncomeDiff = (excessIncomeAmnt / 100) * 5;
         }
 
-        const totalAmount = (startingTotal - excessIncomeDiff);
+        let totalAmount = (startingTotal - excessIncomeDiff);
 
         // This is probably not 100% correct way to do things but not a big deal I think
         // Main goal is to show how much parents get for their children
@@ -75,6 +81,14 @@ const EstimateCard = () => {
         if (data.incomeAmount > maxLimit) {
             amountForIncome = 0;
             amountForChildren = totalAmount;
+        }
+
+        if (data.dependentStatus === 1) {
+            // You don't get anything if you were claimed as a dependent
+            // Narrator: ughhh
+            totalAmount = 0;
+            amountForIncome = 0;
+            amountForChildren = 0;
         }
 
         return {
@@ -125,8 +139,10 @@ const EstimateCard = () => {
                         </Col>
 
                     </Row>
+
                 </CardBody>
             </Card>
+
 
             <Alert color="secondary" style={ { marginTop: '18px' } }>
                 Like the idea of direct cash for individuals? Consider supporting&nbsp;

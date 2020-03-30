@@ -24,12 +24,10 @@ const Index = () => {
 
             <Container>
                 <div className="intro-stimulus-wrap">
-                    <h3 className="intro-stimulus">💵
-                        Calculate your <span title={ 'Coronavirus' }>COVID-19</span> stimulus payment
-                    </h3>
+                    <h3 className="intro-stimulus">Calculate your <span title={ 'Coronavirus' }>COVID-19</span> stimulus payment 💰</h3>
                 </div>
 
-                <Alert className={ 'text-center' } color="success" style={ { marginTop: '18px' } }>
+                <Alert className={ 'text-center' } color="primary" style={ { marginTop: '18px' } }>
                     You will likely get your money by mid-April via&nbsp;
                     <b>
                         <a
@@ -44,14 +42,14 @@ const Index = () => {
                 </Alert>
 
                 <Row>
-                    <Col sm="4">
+                    <Col sm="5">
                         <TaxFilingCard/>
                     </Col>
-                    <Col sm="2">
-                        <ChildrenCard/>
-                    </Col>
-                    <Col sm="6">
+                    <Col sm="4">
                         <IncomeCard/>
+                    </Col>
+                    <Col sm="3">
+                        <ChildrenCard/>
                     </Col>
                 </Row>
 

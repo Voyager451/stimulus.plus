@@ -32,9 +32,9 @@ const ChildrenCard = () => {
 
     return (
         <Card className={ ' num-of-children-card' }>
-            <CardHeader># of Children</CardHeader>
+            <CardHeader>Number of Claimed Children</CardHeader>
             <CardBody>
-                <CardText>In <u>{state.filingYear}</u> filing.</CardText>
+                <CardText>How many children (below age 17) did you claim on your <u>{state.filingYear}</u> filing?</CardText>
                 <Input
                     type="number"
                     placeholder="0"
