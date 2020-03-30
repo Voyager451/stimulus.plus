@@ -13,7 +13,7 @@
     "dev": "next",
     "build": "next build",
     "export": "next export",
-    "build-prod": "npm install & next build && next export",
+    "build-prod": "git pull && npm install && next build && next export",
     "start": "next start"
   },
   "dependencies": {
