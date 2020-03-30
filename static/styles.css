@@ -2,10 +2,11 @@ body {
     background: #e9ecef;
     font-family: "Montserrat", Tahoma, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 500;
+    font-size: 15px;
 }
 
 .container {
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .navbar-brand {
@@ -33,7 +34,7 @@ body {
     font-size: 2rem;
 }
 .intro-stimulus-wrap {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     text-align: center;
 }
 .intro-subtitle {
@@ -89,12 +90,12 @@ body {
 
 
 .tax-filing-card .btn {
-    font-size: 16px;
+    font-size: 15px;
     /*border: 1px solid #000000;*/
 }
 .tax-filing-card label {
     display: block;
-    font-size: 16px;
+    /*font-size: 16px;*/
 }
 .tax-filing-dependent-yes-msg {
     display: inline-block;

@@ -27,7 +27,7 @@ const Index = () => {
                     <h3 className="intro-stimulus">Calculate your <span title={ 'Coronavirus' }>COVID-19</span> stimulus payment 💰</h3>
                 </div>
 
-                <Alert className={ 'text-center' } color="primary" style={ { marginTop: '18px' } }>
+                <Alert className={ 'text-center' } color="primary" style={ { marginTop: '18px', fontSize: '15px' } }>
                     You will likely get your money by mid-April via&nbsp;
                     <b>
                         <a

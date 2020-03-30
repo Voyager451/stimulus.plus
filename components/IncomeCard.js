@@ -39,7 +39,7 @@ const IncomeCard = () => {
             <CardHeader>Income</CardHeader>
             <CardBody>
                 <CardText>
-                    Enter {' '}
+                    Enter your {' '}
                     <a href="https://www.irs.gov/e-file-providers/definition-of-adjusted-gross-income"
                         target="_blank" rel='noreferrer noopener'>
                         adjusted gross income
