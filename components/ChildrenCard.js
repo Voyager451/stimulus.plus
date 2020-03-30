@@ -1,31 +1,28 @@
 import React from 'react';
-import { useSelector, useDispatch, shallowEqual } from 'react-redux'
+import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 
 import {
-    Card, CardBody, CardHeader, CardText, Input
+    Card, CardBody, CardHeader, CardText, Input,
 } from 'reactstrap';
 
-const useState = () =>
-{
-    const state =
-        useSelector(
-            state => ({
-                filingYear: state.filingYear,
-                numOfChildren: state.numOfChildren,
-            }),
-            shallowEqual
-        )
+const useState = () => {
+    const state = useSelector(
+        ({ filingYear, numOfChildren }) => ({
+            filingYear,
+            numOfChildren,
+        }),
+        shallowEqual,
+    );
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
-    const setNumOfChildren = (val) =>
-        dispatch({
-            type: 'SET_NUM_OF_CHILDREN',
-            payload: val
-        })
+    const setNumOfChildren = (val) => dispatch({
+        type: 'SET_NUM_OF_CHILDREN',
+        payload: val,
+    });
 
-    return { state, setNumOfChildren }
-}
+    return { state, setNumOfChildren };
+};
 
 const ChildrenCard = () => {
 
@@ -34,7 +31,7 @@ const ChildrenCard = () => {
     const maxChildren = 20;
 
     return (
-        <Card className={" num-of-children-card"}>
+        <Card className={ ' num-of-children-card' }>
             <CardHeader># of Children</CardHeader>
             <CardBody>
                 <CardText>In <u>{state.filingYear}</u> filing.</CardText>
@@ -42,12 +39,12 @@ const ChildrenCard = () => {
                     type="number"
                     placeholder="0"
                     min="0"
-                    max={maxChildren}
-                    onChange={e => setNumOfChildren(e.target.value)}
+                    max={ maxChildren }
+                    onChange={ (e) => setNumOfChildren(e.target.value) }
                 />
             </CardBody>
         </Card>
     );
-}
+};
 
 export default ChildrenCard;

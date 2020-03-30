@@ -1,46 +1,44 @@
-import React  from 'react';
+import React from 'react';
 
-import { useSelector, shallowEqual } from 'react-redux'
+import { useSelector, shallowEqual } from 'react-redux';
 
 import {
-    Card, CardBody, CardHeader, CardText, Col, Row
+    Card, CardBody, CardHeader, CardText, Col, Row, Alert,
 } from 'reactstrap';
 
-const useState = () =>
-{
-    const state =
-        useSelector(
-            state => ({
-                filingStatus: state.filingStatus,
-                numOfChildren: state.numOfChildren,
-                incomeAmount: state.incomeAmount,
-            }),
-            shallowEqual
-        )
+const useState = () => {
+    const state = useSelector(
+        ({ filingStatus, incomeAmount, numOfChildren }) => ({
+            filingStatus,
+            numOfChildren,
+            incomeAmount,
+        }),
+        shallowEqual,
+    );
 
-    return { state }
-}
+    return { state };
+};
 
-const EstimateCard = (props) => {
+const EstimateCard = () => {
 
     const { state } = useState();
 
     const filingStatusType = {
         SINGLE: 1,
         MARRIED: 2,
-        HEAD_OF_HOUSEHOLD: 3
+        HEAD_OF_HOUSEHOLD: 3,
     };
 
     function parseAmountForDisplay(amount) {
         // Can't get less than $0 unless :yin: is President
+        let amountOutput = amount;
         if (amount < 1) {
-            amount = 0;
+            amountOutput = 0;
         }
-        return amount;
+        return amountOutput;
     }
 
-    function getAmounts(data)
-    {
+    function getAmounts(data) {
         // Default values for filing status Single
         let baseAmount = 1200;
         let excessLimit = 75000;
@@ -58,27 +56,32 @@ const EstimateCard = (props) => {
 
         let amountForIncome = baseAmount;
         let amountForChildren = (data.numOfChildren * 500);
-        let startingTotal = amountForIncome + amountForChildren;
+        const startingTotal = amountForIncome + amountForChildren;
         let excessIncomeDiff = 0;
 
+        // Subtract $5 for every $100 in excess income
         if (data.incomeAmount > excessLimit) {
-            let excessIncomeAmnt = data.incomeAmount - excessLimit;
-            // Subtract $5 for every $100 in excess income
+            const excessIncomeAmnt = data.incomeAmount - excessLimit;
             excessIncomeDiff = (excessIncomeAmnt / 100) * 5;
         }
 
-        let totalAmount = (startingTotal - excessIncomeDiff);
+        const totalAmount = (startingTotal - excessIncomeDiff);
 
+        // This is probably not 100% correct way to do things but not a big deal I think
+        // Main goal is to show how much parents get for their children
         if (data.incomeAmount > excessLimit) {
             amountForIncome = totalAmount - amountForChildren;
         }
-
         if (data.incomeAmount > maxLimit) {
             amountForIncome = 0;
             amountForChildren = totalAmount;
         }
 
-        return { totalAmount, amountForIncome, amountForChildren };
+        return {
+            totalAmount,
+            amountForIncome,
+            amountForChildren,
+        };
     }
 
     const allAmounts = getAmounts(state);
@@ -87,42 +90,52 @@ const EstimateCard = (props) => {
     const totalAmount = parseAmountForDisplay(allAmounts.totalAmount);
 
     return (
-        <Card className={""}>
-            <CardHeader>Payment Estimate</CardHeader>
-            <CardBody>
-                <Row className={"your-money-cards justify-content-center"}>
-                    <Col sm="3 align-self-center">
-                        <Card body className="your-money-total">
-                            <h5>Total 💵</h5>
-                            <CardText id={"total-stimulus"}>${totalAmount}</CardText>
-                        </Card>
-                    </Col>
+        <div>
+            <Card>
+                <CardHeader>Payment Estimate</CardHeader>
+                <CardBody>
+                    <Row className={ 'your-money-cards justify-content-center' }>
+                        <Col sm="3 align-self-center">
+                            <Card body className="your-money-total">
+                                <h5>Total 💵</h5>
+                                <CardText className={ 'total-stimulus' }>${totalAmount}</CardText>
+                            </Card>
+                        </Col>
 
-                    <Col sm="1 align-self-center">
-                        <span className={"your-money-sign"}>=</span>
-                    </Col>
+                        <Col sm="1 align-self-center">
+                            <span className={ 'your-money-sign' }>=</span>
+                        </Col>
 
-                    <Col sm="3 align-self-center">
-                        <Card body className={""}>
-                            <h6 className={"your-money-info-title"}>Based on Children</h6>
-                            <CardText className={"your-money-info-amount"}>${amountForChildren}</CardText>
-                        </Card>
-                    </Col>
+                        <Col sm="3 align-self-center">
+                            <Card body className={ '' }>
+                                <h6 className={ 'your-money-info-title' }>Based on Income</h6>
+                                <CardText className={ 'your-money-info-amount' }>${amountForIncome}</CardText>
+                            </Card>
+                        </Col>
 
-                    <Col sm="1 align-self-center">
-                        <span className={"your-money-sign"}>+</span>
-                    </Col>
+                        <Col sm="1 align-self-center">
+                            <span className={ 'your-money-sign' }>+</span>
+                        </Col>
 
-                    <Col sm="3 align-self-center">
-                        <Card body className={""}>
-                            <h6 className={"your-money-info-title"}>Based on Income</h6>
-                            <CardText className={"your-money-info-amount"}>${amountForIncome}</CardText>
-                        </Card>
-                    </Col>
-                </Row>
-            </CardBody>
-        </Card>
+                        <Col sm="3 align-self-center">
+                            <Card body className={ '' }>
+                                <h6 className={ 'your-money-info-title' }>Based on Children</h6>
+                                <CardText className={ 'your-money-info-amount' }>${amountForChildren}</CardText>
+                            </Card>
+                        </Col>
+
+                    </Row>
+                </CardBody>
+            </Card>
+
+            <Alert color="secondary" style={ { marginTop: '18px' } }>
+                Like the idea of direct cash for individuals? Consider supporting&nbsp;
+                <b><a href="https://movehumanityforward.com/" target="_blank" rel='noreferrer noopener'>a UBI non-profit (Humanity Forward)</a></b>
+                .
+            </Alert>
+
+        </div>
     );
-}
+};
 
 export default EstimateCard;
