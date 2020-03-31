@@ -14,29 +14,11 @@ const InfoCard = () => {
 
                     <ListGroupItem
                         tag="a"
-                        href="https://www.npr.org/2020/03/26/821457551/whats-inside-the-senate-s-2-trillion-coronavirus-aid-package"
+                        href="https://www.nytimes.com/article/coronavirus-stimulus-package-questions-answers.html"
                         target="_blank"
                         rel='noreferrer noopener'
                     >
-                        Stimulus bill money breakdown - NPR
-                    </ListGroupItem>
-
-                    <ListGroupItem
-                        tag="a"
-                        href="https://www.reddit.com/r/dataisbeautiful/comments/fppc7v/oc_where_the_money_goes_in_the_us_senates_2t/"
-                        target="_blank"
-                        rel='noreferrer noopener'
-                    >
-                        Stimulus bill money breakdown - Reddit graphic
-                    </ListGroupItem>
-
-                    <ListGroupItem
-                        tag="a"
-                        href="https://www.documentcloud.org/documents/6819239-FINAL-FINAL-CARES-ACT.html"
-                        target="_blank"
-                        rel='noreferrer noopener'
-                    >
-                        The full stimulus bill (CARES Act) document
+                        Comprehensive FAQ for the stimulus - New York Times
                     </ListGroupItem>
 
                     <ListGroupItem
@@ -45,33 +27,7 @@ const InfoCard = () => {
                         target="_blank"
                         rel='noreferrer noopener'
                     >
-                        Stimulus package guide - Forbes
-                    </ListGroupItem>
-
-                </ListGroup>
-
-            </Col>
-
-            <Col sm="6">
-
-                <ListGroup>
-
-                    <ListGroupItem
-                        tag="a"
-                        href="https://www.washingtonpost.com/graphics/business/coronavirus-stimulus-check-calculator/"
-                        target="_blank"
-                        rel='noreferrer noopener'
-                    >
-                        Stimulus info & calculator - Washington Post
-                    </ListGroupItem>
-
-                    <ListGroupItem
-                        tag="a"
-                        href="https://www.nytimes.com/2020/03/25/us/politics/whats-in-coronavirus-stimulus-bill.html"
-                        target="_blank"
-                        rel='noreferrer noopener'
-                    >
-                        Stimulus info - New York Times
+                        Guide to the stimulus - Forbes
                     </ListGroupItem>
 
                     <ListGroupItem
@@ -85,15 +41,61 @@ const InfoCard = () => {
 
                     <ListGroupItem
                         tag="a"
-                        href="https://www.omnicalculator.com/finance/stimulus-payment"
+                        href="https://www.politico.com/news/2020/03/25/whats-in-stimulus-package-coronavirus-149282"
                         target="_blank"
                         rel='noreferrer noopener'
                     >
-                        Stimulus info & calculator - Omni Calculator
+                        Comprehensive info for the stimulus - Politico
                     </ListGroupItem>
 
                 </ListGroup>
             </Col>
+
+            <Col sm="6">
+
+                <ListGroup>
+
+                    <ListGroupItem
+                        tag="a"
+                        href="https://movehumanityforward.com/covid-relief/"
+                        target="_blank"
+                        rel='noreferrer noopener'
+                    >
+                        Financial aid for individuals affected - Humanity Forward
+                    </ListGroupItem>
+
+                    <ListGroupItem
+                        tag="a"
+                        href="http://scottsantens.com/unconditional-pandemic-security-emergency-ubi"
+                        target="_blank"
+                        rel='noreferrer noopener'
+                    >
+                        Combating the fear of the unknown with Universal
+                        Basic Income during a pandemic - Scott Santens
+                    </ListGroupItem>
+
+                    <ListGroupItem
+                        tag="a"
+                        href="https://www.npr.org/2020/03/26/821457551/whats-inside-the-senate-s-2-trillion-coronavirus-aid-package"
+                        target="_blank"
+                        rel='noreferrer noopener'
+                    >
+                        Stimulus bill money breakdown - NPR
+                    </ListGroupItem>
+
+                    <ListGroupItem
+                        tag="a"
+                        href="https://www.documentcloud.org/documents/6819239-FINAL-FINAL-CARES-ACT.html"
+                        target="_blank"
+                        rel='noreferrer noopener'
+                    >
+                        The full stimulus bill (CARES Act) document
+                    </ListGroupItem>
+
+                </ListGroup>
+
+            </Col>
+
         </Row>
     );
 };

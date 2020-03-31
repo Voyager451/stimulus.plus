@@ -59,7 +59,7 @@ const Index = () => {
                     </Col>
                 </Row>
 
-                <Row style={ { marginTop: '0' } }>
+                <Row style={ { marginTop: '25px' } }>
                     <Col sm="12">
                         <ResourceCard/>
                     </Col>

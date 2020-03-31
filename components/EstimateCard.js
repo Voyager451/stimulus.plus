@@ -143,13 +143,6 @@ const EstimateCard = () => {
                 </CardBody>
             </Card>
 
-
-            <Alert color="secondary" style={ { marginTop: '18px', fontSize: '15px' } }>
-                Like the idea of direct cash for individuals? Consider supporting a {' '}
-                <b><a href="https://movehumanityforward.com/" target="_blank" rel='noreferrer noopener'>UBI non-profit (Humanity Forward)</a></b>
-                .
-            </Alert>
-
         </div>
     );
 };
