@@ -4,12 +4,13 @@ Full source code for https://stimulus.plus
 
 - Math is inside [EstimateCard.js](components/EstimateCard.js)
 
-- Contributions welcome
-
 - Run locally with `npm run dev`
 
 - Exported & served as a simple [static app](https://nextjs.org/docs/advanced-features/static-html-export)
     - `npm run build-prod`
     
+    - Production site is served with GitHub Pages. The `docs` directory (static export) is used by GitHub to serve the app.
     
-Contact: hello@stimulus.plus
+- Contributions welcome
+    
+- Contact: hello@stimulus.plus
