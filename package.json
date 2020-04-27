@@ -1,10 +1,10 @@
 {
-  "name": "stimulus-plus",
+  "name": "stimulus.plus",
   "version": "1.0.0",
   "description": "Stimulus Payment Calculator",
   "license": "MIT",
   "author": "https://github.com/Voyager451",
-  "repository": "https://github.com/Voyager451/stimulus-plus",
+  "repository": "https://github.com/Voyager451/stimulus.plus",
   "main": "index.js",
   "engines": {
     "node": ">=10.16.3"

@@ -9,7 +9,7 @@ const Footer = () => (
             <Row className={ 'your-money-cards justify-content-center' }>
 
                 <Col sm="2 align-self-center">
-                    <b><a href="https://github.com/Voyager451/stimulus-plus">View Source Code</a></b>
+                    <b><a href="https://github.com/Voyager451/stimulus.plus">View Source Code</a></b>
                 </Col>
 
                 <Col sm="2 align-self-center">
