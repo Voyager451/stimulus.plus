@@ -14,6 +14,15 @@ const InfoCard = () => {
 
                     <ListGroupItem
                         tag="a"
+                        href="https://www.bankrate.com/banking/savings/rates/#survey"
+                        target="_blank"
+                        rel='noreferrer noopener'
+                    >
+                        What Americans plan to do with stimulus checks - Bankrate
+                    </ListGroupItem>
+
+                    <ListGroupItem
+                        tag="a"
                         href="https://www.nytimes.com/article/coronavirus-stimulus-package-questions-answers.html"
                         target="_blank"
                         rel='noreferrer noopener'

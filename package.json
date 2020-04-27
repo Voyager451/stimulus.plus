@@ -13,7 +13,7 @@
     "dev": "next",
     "build": "next build",
     "export": "next export -o docs",
-    "build-prod": "cross-env NODE_ENV=production npm install && npm run build && npm run export",
+    "build-prod": "git pull && cross-env NODE_ENV=production npm install && npm run build && npm run export",
     "start": "next start"
   },
   "dependencies": {
